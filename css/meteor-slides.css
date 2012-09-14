@@ -1,13 +1,13 @@
 /*  Stylesheet for the Meteor Slides 1.5.1 slideshow
-	
+
 	Copy "meteor-slides.css" from "/meteor-slides/css/" to your theme's directory to replace
 	the plugin's default stylesheet.
-	
+
 	If you have navigation enabled, be sure to copy the "buttons.png", "next.png",
 	and "prev.png" files to your theme's images folder and update the image paths below,
 	or create new graphics to replace them.
-	
-	Learn more about customizing the stylesheet for Meteor Slides: 
+
+	Learn more about customizing the stylesheet for Meteor Slides:
 	http://www.jleuze.com/plugins/meteor-slides/customizing-the-stylesheet/
 */
 
@@ -77,6 +77,7 @@ div.navboth {
 
 .single-slide .mslide {
 	display: block;
+	position: relative;
 }
 
 .meteor-slides .mslide a {
@@ -96,9 +97,18 @@ div.navboth {
 }
 
 .meteor-slides .mslide img[src$='.png'] {
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)"; /* IE8 */   
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)"; /* IE8 */
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF); /* IE7 */
-	zoom: 1;	
+	zoom: 1;
+}
+
+.ms-text {
+	background: rgba(0, 0, 0, 0.8);
+	bottom: 0;
+	color: white;
+	line-height: 1em;
+	position: absolute;
+	right: 0;
 }
 
 /* =Previous/Next Navigation
@@ -141,7 +151,7 @@ ul.meteor-nav li {
     height: 100%;
 	z-index: 998;
 }
-	
+
 .meteor-nav .prev a {
 	background: url('../images/prev.png') no-repeat center right;
 }
@@ -156,7 +166,7 @@ ul.meteor-nav li {
 
 .meteor-nav .next a:hover {
 	background: url('../images/next.png') no-repeat center right;
-}	
+}
 
 * html .meteor-nav .prev a {
 	background: url('../images/prev.gif') no-repeat center right; /* IE6 */
