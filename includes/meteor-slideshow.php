@@ -141,7 +141,9 @@
 				<?php endif; ?>
 
 					<?php the_post_thumbnail( 'featured-slide', array( 'title' => get_the_title() ) ); ?>
+					<?php if($post->post_content != ""): ?>
 					<div class="ms-text"><?php the_content(); ?></div>
+					<?php endif; ?>
 
 				<?php if ($has_link) echo '</a>'; ?>
 
